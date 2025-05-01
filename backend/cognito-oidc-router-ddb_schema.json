@@ -1,0 +1,8 @@
+{
+  "email": { "S": "alice@example.com" },
+  "issuer": { "S": "https://cognito-idp.<region>.amazonaws.com/<region>_<user_pool_id>" },
+  "client_id": { "S": "abcdef123456" },
+  "redirect_uri": { "S": "https://your-spa.com/callback" },
+  "scopes": { "S": "openid profile email" },
+  "idp_identifier": { "S": "ExampleIdP" }
+}

@@ -9,6 +9,8 @@ interface IdpConfig {
   idp_identifier?: string; // optional
 }
 
+const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
+
 export default function App() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -22,7 +24,7 @@ export default function App() {
     }
 
     try {
-      const res = await fetch('https://your-api-id.execute-api.us-east-1.amazonaws.com/prod/lookup-idp', {
+      const res = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
